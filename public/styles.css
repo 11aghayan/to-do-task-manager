@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --header-font: 'Bebas Neue', cursive;
+  --bg-color: rgb(227, 248, 255);
+  --main-font: 'Roboto', sans-serif;
+}
+
+body {
+  background: var(--bg-color);
+}
+
+.header-font {
+  font-family: var(--header-font);
+}
+
+.container {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  position: relative;
+}
+
+.upper-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.main-header {
+  font-size: 4rem;
+}
+
+.tasks-section {
+  width: 100%;
+  max-width: 70rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 5rem;
+}
+
+.task {
+  width: 100%;
+  border-block: 1px solid rgb(0, 0, 0);
+  padding-block: 1rem;
+}
+
+.task-header-btn {
+  width: 100%;
+  position: relative;
+}
+
+.task-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding-left: 3rem;
+  text-align: start;
+}
+
+.task-btn-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 3rem;
+  font-size: 2rem;
+  z-index: -1;
+  transition: transform 200ms;
+}
+
+.task-btn-rotated {
+  transform: rotateX  (180deg) translateY(1rem);
+  transition: transform 200ms;
+}
+
+.tasks {
+  padding-inline: 3rem;
+  font-family: var(--main-font);
+  font-weight: 400;
+  height: 0;
+  overflow: hidden;
+}
+
+.open {
+  height: 100%;
+}
+
+.new-task-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-family: var(--main-font);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: none;
+  border: 2px solid black;
+  border-radius: 3rem;
+  padding-inline: 1rem;
+  padding-block: .2rem;
+  cursor: pointer;
+}
+
+.new-task-btn:hover {
+  box-shadow: 0 0 4px 0 rgb(0, 0, 0);
+}
+
+.new-task-btn:active {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.7);
+}
+
+/* Creating a new task */
+
+.new-task-section {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);    
+  position: absolute;
+  top: 0;
+  z-index: 1111;
+  transform: translateY(-100%);
+  transition: transform 200ms;
+}
+
+.visible {
+  transform: translateY(0);
+  transition: transform 200ms;
+}
+
+.new-task-form {
+  width: 100%;
+  max-width: 50rem;
+  height: 30rem;
+  background-color: var(--bg-color);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6rem;
+}
+
+.new-task-header {
+  font-size: 3rem;
+}
+
+.new-task-input-div {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.new-task-input {
+  width: 35rem;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  font-family: var(--main-font);
+  text-transform: capitalize;
+  padding-inline: .5rem;
+  padding-block: .1rem;
+}
+
+.new-task-label {
+  font-family: var(--main-font);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.new-task-input:focus {
+  box-shadow: 0 0 5px 0 rgb(200, 241, 255);
+}
+
+.new-task-checkbox-div {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  font-family: var(--main-font);
+  text-transform: uppercase;
+}
+
+.new-task-checkbox-label-div {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: 1.2rem;
+}
+
+.add-checkbox {
+  /* To be done */
+}
+
+.new-task-add-btn {
+  font-family: var(--main-font);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding-inline: 1rem;
+  padding-block: .2rem;
+  margin-top: 4rem;
+  background: none;
+  border: none;
+  border-radius: 3rem;
+  box-shadow: 0 0 3px 0 rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.new-task-add-btn:hover {
+  box-shadow: 0 0 5px 0 rgb(0, 0, 0);
+}
+
+.new-task-add-btn:active {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.7);
+}
+
+.new-task-close-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
