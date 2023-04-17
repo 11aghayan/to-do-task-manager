@@ -23,7 +23,7 @@
       <button type="button" class="new-task-btn">new task</button>
   </section>
   <section class="new-task-section">
-      <form action="#" method="post" class="new-task-form">
+      <form class="new-task-form">
           <h3 class="new-task-header header-font">new task</h3>
           <div class="new-task-input-div">
             <label for="new-task-input" class="new-task-label">task:</label> 
@@ -32,16 +32,16 @@
           <div class="new-task-checkbox-div">
             <div class="new-task-checkbox-label-div">
               <label for="waiting-checkbox">add to: not started</label>
-              <input type="radio" name="add-checkbox" id="waiting-checkbox" class="add-checkbox" checked>
+              <input type="radio" name="state-radio" id="waiting-checkbox" value="0" class="add-checkbox" checked>
             </div>
             <div class="new-task-checkbox-label-div">
               <label for="pending-checkbox">add to: in progress</label>
-              <input type="radio" name="add-checkbox" id="pending-checkbox" class="add-checkbox">
+              <input type="radio" name="state-radio" id="pending-checkbox" value="1" class="add-checkbox">
             </div>
           </div>
-          <button type="submit" class="new-task-add-btn">add</button>
+          <button type="button" class="new-task-add-btn">add</button>
           <button type="button" class="new-task-close-btn">
-            <i class="fa-solid fa-xmark" style="color: #000000;"></i>
+            <i class="fa-solid fa-xmark" style="color: #ff0000;"></i>
           </button>
       </form>
   </section>
@@ -51,36 +51,24 @@
               <button type="button" class="task-btn header-font">tasks not started</button>
               <i class="fa-solid fa-chevron-down task-btn-icon" style="color: #000000;"></i>
           </div>
-          <div class="tasks">
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, soluta?</p>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo aspernatur pariatur itaque temporibus!</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-          </div>
+          <div class="tasks waiting-tasks"></div>
       </div>
       <div class="task pending">
           <div class="task-header-btn">
               <button type="button" class="task-btn header-font">tasks in progress</button>
               <i class="fa-solid fa-chevron-down task-btn-icon" style="color: #000000;"></i>
           </div>
-          <div class="tasks">
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, soluta?</p>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo aspernatur pariatur itaque temporibus!</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-          </div>
+          <div class="tasks pending-tasks"></div>
       </div>
       <div class="task done">
           <div class="task-header-btn">
               <button type="button" class="task-btn header-font">done tasks</button>
               <i class="fa-solid fa-chevron-down task-btn-icon" style="color: #000000;"></i>
           </div>
-          <div class="tasks">
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, soluta?</p>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo aspernatur pariatur itaque temporibus!</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-          </div>
+          <div class="tasks done-tasks"></div>
       </div>
   </section>
 </main>
-<script src="./index.js"></script>
+<script src="./main.js"></script>
 </body>
 </html>
