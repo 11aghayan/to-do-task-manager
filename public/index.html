@@ -68,6 +68,34 @@
           <div class="tasks done-tasks"></div>
       </div>
   </section>
+  <section class="edit-task-section">
+    <form class="edit-task-form">
+      <div class="edit-task-div">
+        <label for="edit-task-input" class="edit-task-label">task</label>
+        <input type="text" class="edit-task-input" name="edit-task-input" id="edit-task-input">
+      </div>
+      <div class="edit-radio-div">
+        <div class="edit-radio-label-div">
+          <label for="edit-radio-waiting" class="edit-radio-label">add to not started tasks</label>
+          <input type="radio" class="edit-radio-waiting" name="edit-radio" id="edit-radio-waiting" value="0">
+        </div>
+        <div class="edit-radio-label-div">
+          <label for="edit-radio-pending" class="edit-radio-label">add to in progress tasks </label>
+          <input type="radio" class="edit-radio-pending" name="edit-radio" id="edit-radio-pending" value="1">
+        </div>
+        <div class="edit-radio-label-div">
+          <label for="edit-radio-done" class="edit-radio-label">add to done tasks</label>
+          <input type="radio" class="edit-radio-done" name="edit-radio" id="edit-radio-done" value="2">
+        </div>
+      </div>
+      <div class="edit-btn-div">
+        <button class="edit-btn">edit</button>
+      </div>
+      <button type="button" class="edit-task-close-btn">
+        <i class="fa-solid fa-xmark" style="color: #ff0000;"></i>
+      </button>
+    </form>
+  </section>
 </main>
 <script src="./main.js"></script>
 </body>
